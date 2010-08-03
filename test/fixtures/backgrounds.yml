@@ -1,0 +1,28 @@
+# == Schema Information
+# Schema version: 20100709022744
+#
+# Table name: backgrounds
+#
+#  id               :integer         not null, primary key
+#  current_school   :string(255)
+#  schools_attended :string(255)
+#  major            :string(255)
+#  short_bio        :text
+#  superpower       :string(255)
+#  website          :string(255)
+#  interests        :string(255)
+#  created_at       :datetime
+#  updated_at       :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+#  column: value

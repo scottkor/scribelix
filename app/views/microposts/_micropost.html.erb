@@ -1,0 +1,19 @@
+<tr>
+  <td class="micropost">
+    <span class="content"><%= h micropost.title %></span>
+    <span class="timestamp">
+	  [Created on <%= micropost.created_at %> ] <br /> 
+	  [Updated on <%= micropost.updated_at %> ]
+    </span>
+	
+	
+  </td>
+  <% if current_user?(micropost.user) %>
+  <td>
+    <%= link_to("show", micropost) %>
+    <%= link_to "edit", edit_micropost_path(micropost) %>
+    <%= link_to "destroy", micropost, :method => :delete,
+                                     :confirm => "You sure?" %>
+  </td>
+  <% end %>
+</tr>

@@ -1,0 +1,15 @@
+<h1>Category List</h1>
+<hr />
+
+
+<% @category_list.each do |t| %>
+  <li> <%= link_to(t.category, url_for(:action => "edit", :id => t.id)) %> 
+  
+  | <%= link_to("delete", {:action => "destroy", :id => t.id},
+                                     :confirm => "You sure?" )%>
+  
+  </li>
+<% end %>
+
+
+<%= link_to("Add a New Category", url_for(:action => "new")) %>

@@ -1,0 +1,16 @@
+<h2> "Note" </h2>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @micropost.title %>
+</p>
+
+
+<p><%= @micropost.category.category_name %></p>
+<%= @micropost.content %>
+
+<p>
+  <%= link_to "Edit", edit_micropost_path(@micropost) %> |
+  <%= link_to "Destroy", @micropost, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", microposts_path %>
+</p>

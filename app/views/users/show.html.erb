@@ -1,0 +1,33 @@
+<table class="profile">
+  <tr>
+    <td class="main">
+      <h2>
+        <%= gravatar_for @user %>
+        <%= h @user.name %>
+      </h2>
+	  <%= render 'follow_form' if signed_in? %>
+	  <% unless @user.microposts.empty? %>
+        <table class="microposts">
+		  <%= link_to("New Note", url_for(:controller => "microposts", :action => "new"), :class => "signup_button round") %>
+          <%= render @microposts %>
+        </table>
+        <%= will_paginate @microposts %>
+      <% end %>
+	  
+    </td>
+    <td class="sidebar round">
+      <strong>Name</strong> <%= h @user.name %><br />
+	  <strong>Major</strong> <%= h @user.major %> <br />
+	  <strong>University</strong> <%= h @user.university %> <br />
+	    <% if @user.university = nil %>
+		<strong>Highschool</strong> <%= h @user.highschool %> <br />
+		<% end %>
+      <strong>URL</strong>  <%= link_to user_path(@user), @user %><br />
+	  <%= render 'pages/stats' %>
+	  <!--
+	  <strong>Notes posted</strong> <%= @user.microposts.count %>
+	  -->
+	  
+    </td>
+  </tr>
+</table>

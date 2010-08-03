@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  current_school: MyString
+  schools_attended: MyString
+  major: MyString
+  short_bio: MyText
+  superpower: MyString
+  website: MyString
+  interests: MyString
+
+two:
+  current_school: MyString
+  schools_attended: MyString
+  major: MyString
+  short_bio: MyText
+  superpower: MyString
+  website: MyString
+  interests: MyString

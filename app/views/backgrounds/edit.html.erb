@@ -1,0 +1,40 @@
+<h1>Editing background</h1>
+
+<% form_for(@background) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :current_school %><br />
+    <%= f.text_field :current_school %>
+  </p>
+  <p>
+    <%= f.label :schools_attended %><br />
+    <%= f.text_field :schools_attended %>
+  </p>
+  <p>
+    <%= f.label :major %><br />
+    <%= f.text_field :major %>
+  </p>
+  <p>
+    <%= f.label :short_bio %><br />
+    <%= f.text_area :short_bio %>
+  </p>
+  <p>
+    <%= f.label :superpower %><br />
+    <%= f.text_field :superpower %>
+  </p>
+  <p>
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </p>
+  <p>
+    <%= f.label :interests %><br />
+    <%= f.text_field :interests %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @background %> |
+<%= link_to 'Back', backgrounds_path %>

@@ -1,0 +1,9 @@
+<h1>New Category</h1>
+<br />
+<% form_for(:category, @category, :url => url_for(:action => "create")) do |f| %>
+<%= f.error_messages %>
+  <%= f.label :category, "Category:" %> <%= f.text_field :category %><br />
+  <%= submit_tag("Submit") %>
+<% end %>
+<br />
+<%= link_to("Back to the List of Categories", url_for(:action => "list")) %>

@@ -1,0 +1,51 @@
+<h2>Edit user</h2>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :university %><br />
+    <%= f.text_field :university %>
+  </div>
+    <div class="field">
+    <%= f.label :highschool %><br />
+    <%= f.text_field :highschool %>
+  </div>
+    <div class="field">
+    <%= f.label :major %><br />
+    <%= f.text_field :major %>
+  </div>
+    <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </div>
+    <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_field :bio %>
+  </div><hr />
+  
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+
+<div>
+  <%= gravatar_for @user %>
+  <a href="http://gravatar.com/emails">change</a>
+</div>

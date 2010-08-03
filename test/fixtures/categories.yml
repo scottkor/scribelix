@@ -1,0 +1,18 @@
+# == Schema Information
+# Schema version: 20100803012125
+#
+# Table name: categories
+#
+#  id            :integer         primary key
+#  category_name :string(255)
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  label: MyString
+
+two:
+  label: MyString

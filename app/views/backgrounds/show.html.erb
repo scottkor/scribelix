@@ -1,0 +1,38 @@
+<p>
+  <b>Current school:</b>
+  <%=h @background.current_school %>
+</p>
+
+<p>
+  <b>Schools attended:</b>
+  <%=h @background.schools_attended %>
+</p>
+
+<p>
+  <b>Major:</b>
+  <%=h @background.major %>
+</p>
+
+<p>
+  <b>Short bio:</b>
+  <%=h @background.short_bio %>
+</p>
+
+<p>
+  <b>Superpower:</b>
+  <%=h @background.superpower %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%=h @background.website %>
+</p>
+
+<p>
+  <b>Interests:</b>
+  <%=h @background.interests %>
+</p>
+
+
+<%= link_to 'Edit', edit_background_path(@background) %> |
+<%= link_to 'Back', backgrounds_path %>

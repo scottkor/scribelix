@@ -1,0 +1,19 @@
+<% form_for @micropost do |f| %>
+  <%= f.error_messages %>
+  
+  <div class="field">
+    <p>
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    </p>
+	
+	Category: <%= select_tag("category_id", options_for_select(@reformatted_category_list)) %><br />
+	
+    <%= f.label :content %><br />
+	<%= f.cktext_area :content, :swf_params=>{:assetable_type=>'Demo', :assetable_id=>0}, :width => 700 %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

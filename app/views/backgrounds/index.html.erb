@@ -1,0 +1,32 @@
+<h1>Listing backgrounds</h1>
+
+<table>
+  <tr>
+    <th>Current school</th>
+    <th>Schools attended</th>
+    <th>Major</th>
+    <th>Short bio</th>
+    <th>Superpower</th>
+    <th>Website</th>
+    <th>Interests</th>
+  </tr>
+
+<% @backgrounds.each do |background| %>
+  <tr>
+    <td><%=h background.current_school %></td>
+    <td><%=h background.schools_attended %></td>
+    <td><%=h background.major %></td>
+    <td><%=h background.short_bio %></td>
+    <td><%=h background.superpower %></td>
+    <td><%=h background.website %></td>
+    <td><%=h background.interests %></td>
+    <td><%= link_to 'Show', background %></td>
+    <td><%= link_to 'Edit', edit_background_path(background) %></td>
+    <td><%= link_to 'Destroy', background, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New background', new_background_path %>

@@ -14,10 +14,14 @@
 #
 
 class Micropost < ActiveRecord::Base
-  attr_accessible :content, :title
+
   
+  attr_accessible :content, :title, :tag_list, :tag, :tags, :tag_counts
+  
+  acts_as_taggable
   belongs_to :user
   belongs_to :category
+
   
   validates_presence_of :content, :user_id
   validates_length_of   :content, :maximum => 500

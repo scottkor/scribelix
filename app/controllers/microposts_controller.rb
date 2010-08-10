@@ -21,13 +21,13 @@ class MicropostsController < ApplicationController
 	@category = Category.find(params[:category_id])
 	@micropost.category = @category
     if @micropost.save
+
       flash[:success] = "Note posted!"
       redirect_to @micropost  # NOTE -- Should redirect to 'show' view
     else
 	  @feed_items = []
-	  @category_list = Category.find(:all)
-	  @reformatted_category_list = @category_list.map {|c| [c.category_name, c.id]}
-	   flash[:error] = "NFailed"
+	  #@category_list = Category.find(:all)
+	  #@reformatted_category_list = @category_list.map {|c| [c.category_name, c.id]}
       render 'pages/home'
     end
   end
@@ -51,6 +51,14 @@ class MicropostsController < ApplicationController
   def destroy
     @micropost.destroy
     redirect_back_or root_path
+  end
+  
+  def index
+    @microposts = Micropost.all
+  end
+  
+  def tag_cloud
+    @tags = Micropost.tag_counts # returns all the tags used
   end
   
   private

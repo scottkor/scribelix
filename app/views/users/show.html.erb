@@ -10,7 +10,8 @@
         <table class="microposts">
 		  <%= link_to("New Note", url_for(:controller => "microposts", :action => "new"), :class => "signup_button round") %>
           <%= render @microposts %>
-        </table>
+
+		  </table>
         <%= will_paginate @microposts %>
       <% end %>
 	  

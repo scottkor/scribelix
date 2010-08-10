@@ -11,14 +11,14 @@ namespace :db do
 end
 
 def make_users
-  admin = User.create!(:name => "Example User",
-                       :email => "example@railstutorial.org",
-                       :password => "foobar",
-                       :password_confirmation => "foobar")
+  admin = User.create!(:name => "Korey Scott",
+                       :email => "escottkor@msu.edu",
+                       :password => "ukyo18",
+                       :password_confirmation => "ukyo18")
   admin.toggle!(:admin)
   99.times do |n|
     name  = Faker::Name.name
-    email = "example-#{n+1}@railstutorial.org"
+    email = "example-#{n+1}@scribe.org"
     password  = "password"
     User.create!(:name => name,
                  :email => email,
@@ -30,6 +30,7 @@ end
 def make_microposts
   User.all(:limit => 6).each do |user|
     50.times do
+	  title = "hello"
       content = Faker::Lorem.sentence(5)
       user.microposts.create!(:content => content)
     end

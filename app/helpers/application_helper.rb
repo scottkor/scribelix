@@ -1,6 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
-
+  include TagsHelper
+  
 # Return a title on a per-page basis.
   def title
 	base_title = "Scribelix"

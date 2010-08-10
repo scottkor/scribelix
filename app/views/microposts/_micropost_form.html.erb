@@ -7,13 +7,40 @@
       <%= f.text_field :title %>
     </p>
 	
-	Category: <%= select_tag("category_id", options_for_select(@reformatted_category_list)) %><br />
+	<p>
+	<%= f.label :category %>
+	<%= select_tag("category_id", options_for_select(@reformatted_category_list)) %><br />
+	</p>
 	
     <%= f.label :content %><br />
 	<%= f.cktext_area :content, :swf_params=>{:assetable_type=>'Demo', :assetable_id=>0}, :width => 700 %>
+	
+ 	<p>
+      <%= f.label 'Tag List (Delimiter = ,)' %><br />
+      <%= f.text_field :tag_list %>
+    </p>
   </div>
   
   <div class="actions">
     <%= f.submit "Submit" %>
   </div>
 <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

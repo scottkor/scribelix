@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @knote.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @knote.content %>
+</p>
+
+<p>
+<strong>This event was tagged with</strong>: <% for tag in @knote.tags %> 
+<%= link_to tag.name, knotes_path(:view =>'tag', :tag => tag.name) %><% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_knote_path(@knote) %> |
+<%= link_to 'Back', knotes_path %>

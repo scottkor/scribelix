@@ -1,6 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+    map.resources :knotes
+
+
 	map.resources :pages
-    map.resources :notes
+
 
 
 

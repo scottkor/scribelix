@@ -122,10 +122,11 @@ td.main {
 }
 
 td.sidebar {
-  width: 30%;
+  width: 80%;
   padding: 1em;
   vertical-align: top;
-  background: #ffc;
+  
+  background: #f9c;
 }
 
 .profile img.gravatar {

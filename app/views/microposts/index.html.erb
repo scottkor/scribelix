@@ -4,7 +4,8 @@
   <tr>
     <th>Title</th>
   </tr>
-  <% for micropost in @microposts %>
+
+  <% @microposts.each do |micropost| %>
     <tr>
       <td><%=h micropost.title %></td>
       <td><%= link_to "Show", micropost %></td>

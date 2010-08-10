@@ -1,13 +1,24 @@
 <h2> "Note" </h2>
 
-<p>
-  <strong>Title:</strong>
-  <%=h @micropost.title %>
-</p>
+	<p>
+	  <strong>Title:</strong>
+	  <%=h @micropost.title %>
+	</p>
 
 
-<p><%= @micropost.category.category_name %></p>
-<%= @micropost.content %>
+	<p>
+	  <strong>Category:</strong>
+	  <%= @micropost.category.category_name %>
+	</p>
+
+	<%= @micropost.content %><br />
+	
+	<p>
+	<strong>This event was tagged with</strong>: <% for tag in @micropost.tags %> 
+	<%= link_to tag.name, microposts_path(:view =>'tag', :tag => tag.name) %><% end %>
+	</p>
+	
+
 
 <p>
   <%= link_to "Edit", edit_micropost_path(@micropost) %> |

@@ -3,7 +3,7 @@
 
 
 <% @category_list.each do |t| %>
-  <li> <%= link_to(t.category, url_for(:action => "edit", :id => t.id)) %> 
+  <li> <%= link_to(t.category_name, url_for(:action => "edit", :id => t.id)) %> 
   
   | <%= link_to("delete", {:action => "destroy", :id => t.id},
                                      :confirm => "You sure?" )%>

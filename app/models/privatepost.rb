@@ -1,28 +1,24 @@
 # == Schema Information
-# Schema version: 20100803031932
+# Schema version: 20100811030119
 #
-# Table name: microposts
+# Table name: privateposts
 #
 #  id          :integer         not null, primary key
 #  content     :string(255)
 #  user_id     :integer
-#  created_at  :datetime
-#  updated_at  :datetime
 #  title       :string(255)
 #  category_id :integer
-#  posted      :datetime
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
-class Micropost < ActiveRecord::Base
+class Privatepost < ActiveRecord::Base
 
-  
   attr_accessible :content, :title, :tag_list, :tag, :tags, :tag_counts
   
   acts_as_taggable
   belongs_to :user
   belongs_to :category
-  
-  has_many :comments
 
   
   validates_presence_of :content, :user_id
@@ -33,7 +29,7 @@ class Micropost < ActiveRecord::Base
   
   default_scope :order => 'created_at DESC'
 
-  # Return microposts from the users being followed by the given user.
+  # Return privateposts from the users being followed by the given user.
   named_scope :from_users_followed_by, lambda { |user| followed_by(user) }
 
   private

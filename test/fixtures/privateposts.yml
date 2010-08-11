@@ -1,0 +1,27 @@
+# == Schema Information
+# Schema version: 20100811030119
+#
+# Table name: privateposts
+#
+#  id          :integer         not null, primary key
+#  content     :string(255)
+#  user_id     :integer
+#  title       :string(255)
+#  category_id :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  content: MyString
+  user_id: 1
+  title: MyString
+  category_id: 1
+
+two:
+  content: MyString
+  user_id: 1
+  title: MyString
+  category_id: 1

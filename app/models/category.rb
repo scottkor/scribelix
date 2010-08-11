@@ -14,5 +14,6 @@ class Category < ActiveRecord::Base
 	validates_presence_of :category_name
 	
 	has_many :microposts
+	has_many :privateposts
 	
 end

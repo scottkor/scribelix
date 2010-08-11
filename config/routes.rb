@@ -14,8 +14,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users, :member => { :following => :get, :followers => :get }
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.resources :microposts 
+  map.resources :privateposts
   map.resources  :relationships, :only => [:create, :destroy]
-  map.resources :categories, :only => [:new, :create, :destroy]
+  map.resources :categories
   
   
   map.signin  '/signin',  :controller => 'sessions', :action => 'new'

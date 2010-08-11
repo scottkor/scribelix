@@ -25,6 +25,9 @@ class User < ActiveRecord::Base
   
 #Implementing the user/relationships has_many association.  
   has_many :microposts, :dependent => :destroy
+  has_many :privateposts, :dependent => :destroy
+  has_many :comments
+  
   has_many :relationships, :foreign_key => "follower_id",
                            :dependent => :destroy
   has_many :following, :through => :relationships, :source => :followed

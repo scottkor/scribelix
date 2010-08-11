@@ -1,0 +1,18 @@
+<h2>Private Notes</h2>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+
+  <% @privateposts.each do |privatepost| %>
+    <tr>
+      <td><%=h privatepost.title %></td>
+      <td><%= link_to "Show", privatepost %></td>
+      <td><%= link_to "Edit", edit_privatepost_path(privatepost) %></td>
+      <td><%= link_to "Destroy", privatepost, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Note", new_privatepost_path %></p>

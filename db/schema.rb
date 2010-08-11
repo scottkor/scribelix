@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100809054422) do
+ActiveRecord::Schema.define(:version => 20100811184731) do
 
   create_table "assets", :force => true do |t|
     t.string   "data_file_name"
@@ -45,6 +45,14 @@ ActiveRecord::Schema.define(:version => 20100809054422) do
     t.datetime "updated_at"
   end
 
+  create_table "comments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "note_id"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "knotes", :force => true do |t|
     t.string   "title"
     t.text     "content"
@@ -67,6 +75,15 @@ ActiveRecord::Schema.define(:version => 20100809054422) do
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "privateposts", :force => true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.string   "title"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

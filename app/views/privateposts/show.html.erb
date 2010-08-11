@@ -1,0 +1,27 @@
+<h2> "Note (Private)" </h2>
+
+	<p>
+	  <strong>Title:</strong>
+	  <%=h @privatepost.title %>
+	</p>
+
+
+	<p>
+	  <strong>Category:</strong>
+	  <%= @privatepost.category.category_name %>
+	</p>
+
+	<%= @privatepost.content %><br />
+	
+	<p>
+	<strong>This event was tagged with</strong>: <% for tag in @privatepost.tags %> 
+	<%= link_to tag.name, privateposts_path(:view =>'tag', :tag => tag.name) %><% end %>
+	</p>
+	
+
+
+<p>
+  <%= link_to "Edit", edit_privatepost_path(@privatepost) %> |
+  <%= link_to "Destroy", @privatepost, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", privateposts_path %>
+</p>

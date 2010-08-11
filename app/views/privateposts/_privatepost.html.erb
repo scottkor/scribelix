@@ -1,0 +1,19 @@
+<tr>
+  <td class="privatepost">
+    <span class="content"><%= h privatepost.title %></span>
+    <span class="timestamp">
+	  [Created on <%= privatepost.created_at %> ] <br /> 
+	  [Updated on <%= privatepost.updated_at %> ]
+    </span>
+	
+	
+  </td>
+  <% if current_user?(privatepost.user) %>
+  <td>
+    <%= link_to("show", privatepost) %>
+    <%= link_to "edit", edit_privatepost_path(privatepost) %>
+    <%= link_to "destroy", privatepost, :method => :delete,
+                                     :confirm => "You sure?" %>
+  </td>
+  <% end %>
+</tr>

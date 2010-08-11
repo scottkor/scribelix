@@ -3,8 +3,8 @@
     <tr>
       <td class="main">
         <h2 class="micropost">Create a note</h2>
-	    <%= link_to("New Note", url_for(:controller => "microposts", :action => "new"), :class => "signup_button round") %>
-
+	    <%= link_to("New Note", url_for(:controller => "microposts", :action => "new"), :class => "newnote_button round") %>
+        <%= link_to("New Private Note", url_for(:controller => "privateposts", :action => "new"), :class => "newpnote_button round") %>
 		
         
 		<%= render 'pages/feed' %>

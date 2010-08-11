@@ -18,7 +18,7 @@ Rails::Initializer.run do |config|
 
   # Specify gems that this application depends on and have them installed with rake gems:install
   
-  config.gem 'will_paginate', :version => '2.3.12'
+  #config.gem 'will_paginate', :version => '2.3.14'
   
   #config.active_record.observers = :user_observer
   

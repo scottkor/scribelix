@@ -89,6 +89,35 @@ a.signup_button {
   padding: 20px;
 }
 
+/* New note button */ 
+
+a.newnote_button {
+  margin: 20px 30px 20px 0px;  
+
+  display: inline-block;
+  text-align: center;
+  width: 140px;
+  color: #fff;
+  background: #ADCBFF;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* New Private note button */ 
+
+a.newpnote_button {
+  margin: 20px 30px 20px 0px;  
+  display: inline-block;
+  text-align: center;
+  width: 190px;
+  color: #fff;
+  background: #92E7E8;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 10px;
+}
+
 /* Round corners */
 .round {
   -moz-border-radius:    10px;
@@ -110,7 +139,6 @@ a.signup_button {
 }
 
 /* User show page */
-
 table.profile {
   width: 100%;
   margin-bottom: 0;
@@ -121,12 +149,12 @@ td.main {
   padding: 1em;
 }
 
+/* Sidebar */
 td.sidebar {
   width: 80%;
   padding: 1em;
   vertical-align: top;
-  
-  background: #f9c;
+  background: #BEDEFF;
 }
 
 .profile img.gravatar {
